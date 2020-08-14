@@ -87,7 +87,9 @@ var jsfile = {
     }
 }
 
-var outputterm = document.getElementById('jsterm');
-var outputdef = document.getElementById('jsdef');
-outputterm.innerHTML = jsfile.entries[2].term;
-outputdef.innerHTML = jsfile.entries[2].definition;
+function searchClicked() {
+  var outputterm = document.getElementById('jsterm');
+  var outputdef = document.getElementById('jsdef');
+  outputterm.innerHTML = jsfile.entries[2].term;
+  outputdef.innerHTML = jsfile.entries[2].definition;
+}
