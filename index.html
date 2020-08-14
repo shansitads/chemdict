@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IUPAC Dictionary</title>
+    <!-- tailwind -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <!-- header -->
+    <header class="text-gray-500 bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+
+            <!-- source link -->
+            <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+                <a href="https://goldbook.iupac.org/" class="mr-5 hover:text-white">Source Link</a>
+            </nav>
+            <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-white lg:items-center lg:justify-center mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                     stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-teal-500 rounded-full"
+                     viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl xl:block lg:hidden">chemdict</span>
+            </a>
+
+            <!-- download pdf button -->
+            <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+              <a href="./iupacdata/goldbook.pdf" download>
+                <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
+                    Download PDF of all definitions
+                    <svg stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                         class="fill-current w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>
+                    </svg>
+                </button>
+              </a>
+            </div>
+        </div>
+    </header>
+
+</head>
+
+<body>
+
+<!-- search bar section -->
+<section class="text-gray-500 bg-gray-900 body-font">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+
+            <!--top geading-->
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">IUPAC Chemistry Dictionary</h1>
+
+            <!--subheading-->
+            <p class="mb-8 leading-relaxed">Look up official IUPAC definitions for terms in chemistry</p>
+
+            <!--search bar-->
+            <div class="flex w-full md:justify-start justify-center">
+                <!--textbox-->
+                <input class="bg-gray-800 rounded mr-4 border border-gray-700 text-white focus:outline-none focus:border-teal-500 text-base px-4 md:w-full lg:w-full xl:w-1/2 w-2/4"
+                       placeholder="Enter term" type="text" name="param">
+                <!--search button-->
+                <a href="definition.html">
+                    <button class="inline-flex text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-lg">
+                        Search
+                    </button>
+                </a>
+            </div>
+
+            <!--comment below search bar-->
+            <div class="flex lg:flex-row md:flex-col text-gray-300">
+                <p class="text-sm mt-2 text-gray-600 mb-8 w-full">A minimalistic dictionary for your reference.</p>
+            </div>
+
+        </div>
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6" >
+            <div class="flex rounded-lg h-full bg-gray-800 p-8 flex-col">
+                <div class="flex items-center mb-3">
+                    <h2 class="text-white text-lg title-font font-medium" id="jsterm">Term</h2>
+                </div>
+                <div class="flex-grow" id="jsdef">Definition</div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+</section>
+
+<!--new definitions-->
+<section class="text-gray-500 body-font bg-gray-900">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h2 class="text-xs text-teal-500 tracking-widest font-medium title-font mb-1">RECENT CHANGES | AUG 2020</h2>
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Recently Updated IUPAC Definitions</h1>
+    </div>
+    <div class="flex flex-wrap">
+      <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800">
+        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Shooting Stars</h2>
+        <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+        <a class="text-teal-500 inline-flex items-center">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800">
+        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">The Catalyzer</h2>
+        <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+        <a class="text-teal-500 inline-flex items-center">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800">
+        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Neptune</h2>
+        <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+        <a class="text-teal-500 inline-flex items-center">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800">
+        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Melanchole</h2>
+        <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+        <a class="text-teal-500 inline-flex items-center">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+<script src='script.js'></script>
+
+</html>
