@@ -1,4 +1,3 @@
-
 var jsfile = {
     "title": "IUPAC Compendium of Chemical Terminology",
     "publisher": "International Union of Pure and Applied Chemistry",
@@ -87,9 +86,17 @@ var jsfile = {
     }
 }
 
+
 function searchClicked() {
+  var inputterm = document.getElementById('jsinput').value;
   var outputterm = document.getElementById('jsterm');
   var outputdef = document.getElementById('jsdef');
-  outputterm.innerHTML = jsfile.entries[2].term;
-  outputdef.innerHTML = jsfile.entries[2].definition;
+
+  outputterm.innerHTML = inputterm
+  for (let i = 1; i <= 10; i++) {
+    if (jsfile.entries[i].term == inputterm){
+      outputdef.innerHTML = jsfile.entries[i].definition;
+      break;
+    }
+  }
 }
